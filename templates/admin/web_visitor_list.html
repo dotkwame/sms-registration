@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="../stylesheets/style.css" />
+    </head>
+    <body>
+        <div id="mainwrapper">
+            <div id="header">
+                <h1>All Users who registered via the web</h1>
+            </div>
+            <div id="nav">
+                <a href="{{smsurl}}">{{smsurl_linktext}}</a>
+                <a href="{{url}}">{{ url_linktext}}</a>
+            </div>
+            <div id="content">
+                <table class="datatable">
+                    <thead>
+                        <td>Full Name </td>
+                        <td>Email </td>
+                        <td>Expectation </td>
+                        <td>Date registered </td>
+                        <td>Confirmation No. </td>
+                    </thead>
+                    {% for i in visitors %}
+                    <tr>
+                        <td>{{ i.fname }} </td>
+                        <td>{{ i.email }} </td>
+                        <td>{{ e.expectation }}</td>
+                        <td>{{ i.date|date:"l, M d Y" }} </td>
+                        <td>{{ i.hash }} </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div id="footer">
+            </div>
+        </div>
+    </body>
+</html>

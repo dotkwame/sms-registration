@@ -1,16 +1,19 @@
 # The entry point to the webapp
 # API import 
+import sys
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
 
 #local imports
-from handlers import MainPage, Register, ListVisitors, Event
+from handlers import MainPage, Register, WebRegister, Event, ListVisitors, WebVisitors
 
 application = webapp.WSGIApplication(
   [('/', MainPage), 
    ('/register', Register),
-   ('/event/create', Event),
-   ('/event/list', ListVisitors)],
+   ('/webregister',WebRegister),
+   ('/admin', ListVisitors),
+    ('/admin/web', WebVisitors),
+   ('/event/create', Event)],
   debug=True)
 
 def main():

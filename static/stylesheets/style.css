@@ -25,3 +25,59 @@ body {
     /*position: relative;*/
    /* bottom: 20px;*/
 }
+
+/* atokubi stylings */
+
+#mainwrapper{
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	font-size: small;
+}
+
+#header{
+	text-align: center;
+}
+
+#nav{}
+
+#content{}
+
+#footer{}
+
+.auto_center{
+	text-align: center;
+}
+
+.formlabel{
+	width: 40%;
+	text-align: left;
+	font-style:italic;
+}
+
+.forminput{
+	width: 100%;
+	text-align: left;
+}
+
+.dounderline{
+	border-bottom: 1px solid red;
+}
+
+
+.inputrequired{
+	color: red;
+}
+
+legend{
+	font-weight: bold;
+}
+
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.datatable td{
+	border: 1px dotted black;
+}
